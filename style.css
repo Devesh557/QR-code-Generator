@@ -1,0 +1,92 @@
+body{
+    background-color: #5F9EA0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    background-color: azure;
+    /* width: auto;
+    height: auto; */
+    margin-top: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border-radius:10px ;
+
+}
+
+h2{
+    font-family: "Workbench", sans-serif;
+    font-size: 2rem;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "BLED" 0,
+    "SCAN" 0;
+}
+.box .btn{
+    font-family: "Kalam", cursive;
+    font-weight: 800;
+    font-size: 1.5rem;
+    background-color: #24acb1;
+    padding: 5px;
+    margin: 10px 5px ;
+    cursor: pointer;
+    border-radius: 15px;
+}
+.box input{
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 40px;
+}
+#imgbox{
+    width: 200px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+#imgbox img{
+    width: 100%;
+    padding: 10px;
+
+}
+#imgbox.show-img{
+    max-height: 300px;
+    margin: 10px auto;
+    border: 1px solid #d1d1d1;
+}
+.err{
+    animation: shake 0.1s linear 5;
+}
+@keyframes shake{
+    0%{
+        transform: translateX(0px);
+    }
+    25%{
+        transform: translateX(-2px);
+    }
+    50%{
+        transform: translateX(0px);
+    }
+    70%{
+        transform: translateX(2px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+@media only screen and (max-width: 600px){
+    .box{
+        width: fit-content;
+        height: fit-content;
+    }
+    h2{
+        font-size: 1.4rem;
+    }
+    .box input{
+        font-size: 1.2rem;
+    }
+}
